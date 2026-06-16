@@ -100,14 +100,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
       {/* Main content container */}
       <div className="p-6 flex flex-col flex-grow items-center text-center">
-        {/* Product image wrapper - styled as a solid black display case */}
-        <div className="relative w-full h-48 flex items-center justify-center mb-5 overflow-hidden rounded-2xl bg-black border border-white/5">
+        {/* Product image wrapper - styled as a solid black display case with minimized padding */}
+        <div className="relative w-full h-48 flex items-center justify-center mb-5 overflow-hidden rounded-2xl bg-black border border-white/5 p-1">
           {!imageError ? (
             <img
               src={`/products/${product.image}.png`}
               alt={product.name}
               style={imageStyle}
-              className="max-h-40 max-w-[85%] object-contain transition-all duration-300 ease-out"
+              className="w-full h-full max-h-46 object-contain p-0.5 transition-all duration-300 ease-out"
               onError={() => setImageError(true)}
             />
           ) : (
